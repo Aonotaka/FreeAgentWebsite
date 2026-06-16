@@ -24,7 +24,6 @@
           <span>Takanori Aono</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
-          <a href="#work-samples">Work Samples</a>
           <a href="#industries">Industries</a>
           <a href="#what-i-solve">What I Solve</a>
           <a href="#articles">Articles</a>
@@ -35,18 +34,23 @@
     </header>
 
     <main>
-      <section class="hero site-wrap">
-        <p class="kicker reveal">Simulation Validation Specialist — Moldflow &amp; FEA</p>
-        <h1 class="reveal reveal-delay-1">Are You Truly Ready to Cut Steel?</h1>
-        <p class="reveal reveal-delay-2">
-          I'm Takanori Aono. I help injection molders answer the single most expensive question
-          in manufacturing before they spend a dime on tooling. By combining Moldflow and
-          structural FEA, I de-risk your part design and validate your mold before the first
-          shot — helping you avoid unnecessary repairs and costly mold tryouts.
-        </p>
-        <div class="hero-cta reveal reveal-delay-3">
-          <a class="btn" href="#contact">Work With Me</a>
-          <a class="btn btn-secondary" href="#articles">Read Technical Articles</a>
+      <section class="hero site-wrap hero-split">
+        <div class="hero-content">
+          <p class="kicker reveal">Simulation Validation Specialist — Moldflow &amp; FEA</p>
+          <h1 class="reveal reveal-delay-1">Are You Truly Ready to Cut Steel?</h1>
+          <p class="reveal reveal-delay-2">
+            I'm Takanori Aono. I help injection molders answer the single most expensive question
+            in manufacturing before they spend a dime on tooling. By combining Moldflow and
+            structural FEA, I de-risk your part design and validate your mold before the first
+            shot — helping you avoid unnecessary repairs and costly mold tryouts.
+          </p>
+          <div class="hero-cta reveal reveal-delay-3">
+            <a class="btn" href="#contact">Work With Me</a>
+            <a class="btn btn-secondary" href="#articles">Read Technical Articles</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2" aria-hidden="true">
+          <img src="Moldflow Picture 2.png" alt="" class="hero-deco-img" />
         </div>
       </section>
 
@@ -96,57 +100,6 @@
         </div>
       </div>
 
-      <section id="work-samples" class="section site-wrap">
-        <h2>Work Samples</h2>
-        <p class="section-intro">
-          Real simulation outputs from past projects — not stock images.
-        </p>
-        <div class="gallery">
-          <figure class="gallery-item">
-            <img
-              src="Moldflow Picture.png"
-              alt="Moldflow warpage and deflection analysis on an automotive wheel arch liner showing color-mapped displacement"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Warpage Analysis — Automotive Wheel Arch Liner</strong>
-              Color-mapped deflection result showing differential shrinkage on a glass-filled polymer
-              part. Gate location and runner layout (yellow) were optimized to minimize out-of-plane
-              warpage.
-            </figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="Moldflow Picture 2.png"
-              alt="Moldflow fill-time analysis on a large structural automotive bracket showing time-to-fill gradient from blue to red"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Fill-Time Analysis — Structural Automotive Bracket</strong>
-              Fill-time result (0 – 2.27 s) across a complex structural bracket with multiple gates
-              and hot-runner drops. Analysis confirmed balanced filling and identified hesitation
-              risk zones before steel was ordered.
-            </figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="Mesh Picture.png"
-              alt="High-quality tetrahedral mesh on a plastic part showing refined elements around ribs and bosses"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Mesh Preparation — Rib &amp; Boss Detail</strong>
-              Close-up of a refined tetrahedral mesh around rib and boss features. Mesh density is
-              increased in high-stress / high-hesitation zones to improve solver accuracy for
-              warpage and structural FEA results.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section id="industries" class="section site-wrap">
         <h2>Industries I Serve</h2>
         <p class="section-intro">
@@ -200,56 +153,62 @@
         </div>
       </section>
 
-      <section id="what-i-solve" class="section site-wrap">
-        <h2>What I Solve</h2>
-        <p class="section-intro">
-          Focused simulation support for the failure modes that cost molders the most time,
-          margin, and credibility — from first DFM through T1 correlation.
-        </p>
-        <div class="grid">
-          <article class="card">
-            <h3>DFM &amp; Gate Optimization</h3>
-            <p>
-              Preliminary DFM analysis and Moldflow studies to determine gate count, gate
-              location, clamp force, injection pressure, and projected cycle time before tool
-              configuration is locked.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Warpage &amp; Windage</h3>
-            <p>
-              Multi-solver warpage analysis (CRIMS, Uncorrected Residual Strain, STAMP) and
-              windage model generation for glass-filled polymers exceeding GD&amp;T tolerances.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Defect Prevention</h3>
-            <p>
-              Identify and resolve short shots, unbalanced filling, air traps, weld lines, and
-              excessive injection / clamp forces before steel is ordered.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Cooling &amp; Packing</h3>
-            <p>
-              Runner and cooling-line design in collaboration with hot runner suppliers, plus
-              packing optimization for volumetric shrinkage uniformity and gate freeze time.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Structural FEA</h3>
-            <p>
-              Deflection, stress, and dimensional performance validation — critical for
-              metal-to-plastic conversions and automotive structural compliance.
-            </p>
-          </article>
-          <article class="card">
-            <h3>TIS 3.1 / T1 Correlation</h3>
-            <p>
-              Full Moldflow correlation studies and T1 protocol support to satisfy GM's TIS 3.1
-              requirements, including scan-data vs. nominal math data validation.
-            </p>
-          </article>
+      <section id="what-i-solve" class="section site-wrap what-i-solve-wrap">
+        <div class="what-i-solve-text">
+          <h2>What I Solve</h2>
+          <p class="section-intro">
+            Focused simulation support for the failure modes that cost molders the most time,
+            margin, and credibility — from first DFM through T1 correlation.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <h3>DFM &amp; Gate Optimization</h3>
+              <p>
+                Preliminary DFM analysis and Moldflow studies to determine gate count, gate
+                location, clamp force, injection pressure, and projected cycle time before tool
+                configuration is locked.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Warpage &amp; Windage</h3>
+              <p>
+                Multi-solver warpage analysis (CRIMS, Uncorrected Residual Strain, STAMP) and
+                windage model generation for glass-filled polymers exceeding GD&amp;T tolerances.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Defect Prevention</h3>
+              <p>
+                Identify and resolve short shots, unbalanced filling, air traps, weld lines, and
+                excessive injection / clamp forces before steel is ordered.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Cooling &amp; Packing</h3>
+              <p>
+                Runner and cooling-line design in collaboration with hot runner suppliers, plus
+                packing optimization for volumetric shrinkage uniformity and gate freeze time.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Structural FEA</h3>
+              <p>
+                Deflection, stress, and dimensional performance validation — critical for
+                metal-to-plastic conversions and automotive structural compliance.
+              </p>
+            </article>
+            <article class="card">
+              <h3>TIS 3.1 / T1 Correlation</h3>
+              <p>
+                Full Moldflow correlation studies and T1 protocol support to satisfy GM's TIS 3.1
+                requirements, including scan-data vs. nominal math data validation.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="what-i-solve-deco" aria-hidden="true">
+          <img src="Moldflow Picture.png" alt="" class="deco-img deco-img-top" loading="lazy" />
+          <img src="Mesh Picture.png" alt="" class="deco-img deco-img-bottom" loading="lazy" />
         </div>
       </section>
 
