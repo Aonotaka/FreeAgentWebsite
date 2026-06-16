@@ -440,7 +440,78 @@ img {
 
 
 
-.card-visual {
+.faq-list {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.3rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.3rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  gap: 1rem;
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.3rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+details[open] .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.3rem 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.faq-answer p {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.faq-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+.faq-logo-cert {
+  height: 44px;
+}
+
+
   padding: 0;
   overflow: hidden;
 }
