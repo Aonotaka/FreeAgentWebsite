@@ -329,59 +329,84 @@ img {
   text-decoration: underline;
 }
 
-.trust-strip {
+.cred-bar {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem 1.4rem;
-  padding: 1.2rem 1.4rem;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.06), rgba(180, 83, 9, 0.06));
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1.8rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  margin-top: 1.5rem;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
-.cert-link {
+.cred-bar-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 1.3rem 1.5rem;
+}
+
+.cred-bar-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 0 1.5rem;
+}
+
+.cred-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.cred-icon-sm {
+  font-size: 0.65rem;
 }
 
 .cert-badge-img {
-  height: 40px;
+  height: 48px;
   width: auto;
   display: block;
-  opacity: 0.9;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
   transition: opacity 0.2s;
 }
 
 .cert-link:hover .cert-badge-img {
-  opacity: 1;
+  opacity: 0.85;
 }
 
-.trust-divider {
-  width: 1px;
-  height: 24px;
-  background: var(--line);
-  flex-shrink: 0;
+.cred-bar-text {
+  flex: 1;
 }
 
-.trust-item {
+.cred-bar-text strong {
+  display: block;
+  font-size: 0.97rem;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.cred-bar-text p {
+  margin: 0;
   font-size: 0.88rem;
   color: var(--muted);
-  font-weight: 600;
+  line-height: 1.6;
 }
 
-.trust-link {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--accent);
-  transition: color 0.2s;
-}
 
-.trust-link:hover {
-  color: var(--text);
-  border-bottom-style: solid;
-}
 
 .card-visual {
   padding: 0;
