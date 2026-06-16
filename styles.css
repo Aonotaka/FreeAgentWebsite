@@ -501,14 +501,14 @@ details[open] .faq-question::after {
 }
 
 .faq-logo {
-  height: 32px;
+  height: 20px;
   width: auto;
   display: block;
   opacity: 0.85;
 }
 
 .faq-logo-cert {
-  height: 44px;
+  height: 28px;
 }
 
 
