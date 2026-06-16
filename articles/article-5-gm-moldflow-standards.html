@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What General Motors requires in Moldflow simulations, why only GM-approved analysts can deliver reliable results, and what is at stake when standards are ignored."
+    />
+    <title>What GM Requires in Moldflow and Why Approved Analysts Matter | Takanori Aono</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Takanori Aono</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="article-hero article-shell">
+      <a class="back-link" href="../index.html">&larr; Back to Home</a>
+      <p class="kicker">Article 5 &middot; 7 minute read</p>
+      <h1>What General Motors Requires in Moldflow and Why Moldflow Needs to Be Done by Approved Analysts</h1>
+    </section>
+
+    <main class="article-shell">
+      <article class="article-content">
+        <p>
+          General Motors does not accept Moldflow results the way most of the industry has treated
+          them for decades &mdash; as a checkbox, a colorful fill animation to satisfy a customer request,
+          or a late-stage gate-location exercise. GM requires a structured, documented, phased
+          simulation program governed by published standards, executed by analysts who have been
+          reviewed and formally approved through GM's own internal process.
+        </p>
+
+        <p>
+          If you supply plastic components to GM, or if you are a molder or tool shop serving Tier 1
+          suppliers on a GM platform, this framework is not optional. Understanding what the standards
+          actually demand &mdash; and why analyst qualification is central to the whole system &mdash; is essential
+          for anyone serious about participating in GM's supply chain without costly surprises.
+        </p>
+
+        <div class="callout">
+          GM's standards exist because the industry, left to its own devices, was producing wildly
+          inconsistent Moldflow results &mdash; some rigorous, some dangerously misleading. The standards
+          impose a floor of quality that protects programs, budgets, and launch timing.
+        </div>
+
+        <h2>Why GM Created Its Own Moldflow Standards</h2>
+        <p>
+          GM conducted a broad survey of Moldflow practice across its supply chain and found a
+          fragmented landscape. Some suppliers had expert-certified analysts running thorough,
+          physics-driven analyses. Others assigned Moldflow duties to whoever had a seat license,
+          regardless of training or experience. The outputs of these two groups were being treated as
+          equivalent, even when one was rigorous and one was not.
+        </p>
+
+        <p>
+          The consequences showed up at launch. Warpage that simulation had predicted &mdash; and flagged &mdash;
+          was ignored because engineers and program managers lacked the context to interpret the
+          results. Other programs had weld line and air trap defects that a proper analysis would have
+          caught months earlier, at a fraction of the tooling change cost. In still other cases,
+          material data used in the simulation was outdated or incomplete, making the predictions
+          unreliable regardless of the analyst's skill.
+        </p>
+
+        <p>
+          GM responded by building its own standards, its own approved analyst program, and its own
+          curated material database. The two governing documents are <strong>GMW 16355</strong>,
+          which defines the injection molding simulation requirements, and <strong>GMW 16365</strong>,
+          which governs the T1 tryout protocol. Both are available through the IHS / ats.com
+          standards portal. Together they define what an acceptable Moldflow program looks like at
+          every stage of a vehicle development program.
+        </p>
+
+        <h2>The Three Moldflow Milestone Stages</h2>
+        <p>
+          GM's Global Vehicle Development Process has defined milestones that map directly to
+          Moldflow deliverables. The three stages are MF0, MF1, and MF2, and each has a different
+          scope, a different level of model maturity, and a different set of expected outputs.
+        </p>
+
+        <p>
+          <strong>MF0</strong> happens at the SIVER stage &mdash; early concept, well before mold
+          construction. The goal is a 30,000-foot view: is this part manufacturable as currently
+          designed? Analysis at this stage covers filling, packing, and warpage at a conceptual
+          level. There is no cooling design to evaluate yet, but the fill pattern, gate zone viability,
+          and potential warpage risk are assessed to influence part design while changes are still
+          inexpensive.
+        </p>
+
+        <p>
+          <strong>MF1</strong> arrives at the ESPER stage. The part design is more developed, and
+          the analysis now adheres fully to GMW 16355. Gate architecture, runner concepts, and
+          filling patterns are established here. This is the stage where design changes informed by
+          simulation are still feasible without major schedule or cost impact.
+        </p>
+
+        <p>
+          <strong>MF2</strong> occurs at the IVER stage, when mold construction is underway. Cooling
+          designs are available, manifold and hot runner layouts are finalized, and full-blown
+          simulation of the complete mold system is performed. At this stage, the analysis is a
+          verification and optimization exercise &mdash; the window for fundamental design changes has
+          largely closed.
+        </p>
+
+        <p>
+          This phased structure is not bureaucratic overhead. It reflects a hard-learned truth: the
+          earlier simulation influences design decisions, the cheaper and more effective those
+          decisions are. By the time a mold is being cut, fixing a warpage driver costs an order of
+          magnitude more than it would have at MF0.
+        </p>
+
+        <h2>Material Data: The Foundation Everything Else Depends On</h2>
+        <p>
+          The most overlooked requirement in GM's standards &mdash; and arguably the most important &mdash; is
+          material characterization. Moldflow is built on physics models that require eleven distinct
+          data sets to run with full accuracy. These include viscosity data, pvT data (pressure,
+          volume, temperature relationships), thermal conductivity, heat capacity, shrinkage and
+          warpage coefficients, and fiber orientation data for filled materials, among others.
+        </p>
+
+        <p>
+          Moldflow's commercial database contains over 11,000 material entries, but not all of them
+          are fully characterized for all eleven data sets. Some entries are years or decades old and
+          may not reflect the current grade of resin from the material supplier. GM's standard
+          explicitly prohibits the use of material database files older than three years unless they
+          have been independently verified against current material properties.
+        </p>
+
+        <p>
+          To address this at scale, GM built its own proprietary material database, funded the
+          characterization of approved materials, and made that database available exclusively to
+          GM-approved analysts. When you look at material quality indicators in Moldflow's database
+          and see gold-rated entries across filling, packing, and warpage categories, those are the
+          materials meeting the standard.
+        </p>
+
+        <div class="callout">
+          Using an incomplete material file does not just reduce accuracy &mdash; it can make predictions
+          dangerously wrong. A case with missing juncture loss data projected 10,000 PSI injection
+          pressure. The correct material data showed 23,000 PSI. The molder would have arrived at
+          the press unable to fill the part.
+        </div>
+
+        <p>
+          In another documented case, a supplier ran Moldflow analysis with inadequate shrinkage
+          data, predicted 3mm of warpage, and proceeded to cut the mold. Actual warpage was nearly
+          6mm. By the time GM's own material database became available and the analysis was rerun,
+          the cavity side of the mold had already been scrapped. A new manifold was built, gate
+          count was increased to three, and the program paid for an entirely avoidable correction.
+          The material file was the failure point &mdash; not the mold design, not the processing.
+        </p>
+
+        <h2>Mesh Quality and Simulation Setup Standards</h2>
+        <p>
+          Beyond material data, GMW 16355 defines expectations for model setup and mesh quality.
+          Analysts must make informed choices between midplane, dual-domain, and 3D mesh types
+          depending on part geometry and analysis objectives. Runner and gate geometry must be
+          modeled accurately, not approximated with simplified inputs. Cooling circuits must be
+          represented with sufficient fidelity to yield meaningful thermal predictions.
+        </p>
+
+        <p>
+          Mesh density is not a detail to minimize for solve speed. A documented example from the
+          webinar series supporting GM's standards showed a chrome appearance part where a weld line
+          did not appear in simulation until the mesh was refined to 3.3 million elements. At coarser
+          resolution, the convergent flow-front behavior that produces the knit was not resolved.
+          The analyst would have signed off on a geometry that fails visually in production.
+        </p>
+
+        <p>
+          Getting mesh quality right is part of the analyst approval criteria. Applicants must
+          demonstrate that they understand what constitutes a good mesh, where refinement is
+          required, and how to balance element count against solve time without sacrificing
+          predictive accuracy.
+        </p>
+
+        <h2>What a GM-Approved Analyst Actually Is</h2>
+        <p>
+          The approved analyst designation is not a title you can self-certify or purchase. It is
+          earned through a defined process managed by GM's Manufacturing Polymer Engineering Group
+          and it has explicit prerequisites.
+        </p>
+
+        <p>
+          The first requirement is CAE background. GM does not approve analysts whose only
+          qualification is holding a Moldflow seat license. Simulation work without engineering
+          judgment &mdash; without the ability to interpret what results mean in a physical manufacturing
+          context &mdash; is the root cause of the low-quality Moldflow outputs the standards were created
+          to eliminate.
+        </p>
+
+        <p>
+          The second requirement is Autodesk Moldflow Expert Certification. There are three
+          certification levels &mdash; Associate, Professional, and Expert. The approved analyst program
+          requires progression through all three. Expert certification is not a rubber stamp. It
+          requires demonstrated proficiency in simulation setup, result interpretation, and
+          troubleshooting across a range of real-world injection molding scenarios.
+        </p>
+
+        <p>
+          After certification, an analyst submits an application to GM and must demonstrate three
+          specific capabilities:
+        </p>
+
+        <ul>
+          <li>
+            The ability to identify appearance and dimensional defects in simulation results &mdash;
+            not just produce outputs, but read them correctly.
+          </li>
+          <li>
+            The ability to determine root causes of warpage and defect behavior, distinguishing
+            between filling, packing, cooling, and material-driven contributors.
+          </li>
+          <li>
+            The ability to propose and evaluate solutions across all corrective levers &mdash; tooling
+            design, processing, material selection, and part geometry.
+          </li>
+        </ul>
+
+        <p>
+          An analyst who can only run a fill analysis and produce a fill-time animation fails this
+          criteria. The standard requires a full-systems view of the injection molding process and
+          the simulation tools that represent it.
+        </p>
+
+        <h2>Why Analyst Quality Changes Program Outcomes</h2>
+        <p>
+          The approved analyst requirement exists because simulation is only as valuable as the
+          judgment that interprets it. Two analysts can run the same geometry with the same material
+          in the same software version and reach completely different conclusions &mdash; about gate
+          viability, about warpage risk, about what process window exists and how robust it is.
+        </p>
+
+        <p>
+          An inexperienced analyst may miss a problematic knit line because the mesh was too coarse
+          to resolve it. They may not recognize that a pvT data gap is making their shrinkage
+          predictions unreliable. They may not think to vary processing conditions systematically to
+          understand sensitivity. They may interpret a Moldflow fill animation as validation of the
+          design when it is actually a warning.
+        </p>
+
+        <p>
+          GM's requirement for stakeholder engagement makes this point concrete. The standard
+          requires that the Moldflow analyst engage with the GM product design engineer, the
+          manufacturing engineer, the part supplier, the tooling source, the material supplier, and
+          the hot runner supplier before the analysis scope is set. Why? Because without those
+          conversations, the analyst does not know where gates are permitted, where knit lines are
+          cosmetically or structurally unacceptable, what the critical tolerances are, or what the
+          toolmaker can and cannot accommodate.
+        </p>
+
+        <p>
+          A gate location that looks excellent from a filling and warpage perspective may land on a
+          Class A surface, require a slide that creates a tooling conflict, or place a knit line
+          through a load-bearing boss. The analyst who runs simulation in isolation and presents
+          results without that context is producing engineering theater, not engineering insight.
+        </p>
+
+        <div class="callout">
+          Approved analysts do not just run simulations &mdash; they run them in context, with the right
+          inputs, and with the ability to close the loop between predicted results and what actually
+          happens when the mold runs.
+        </div>
+
+        <h2>The Cost of Ignoring Standards</h2>
+        <p>
+          The financial argument for GM's standards is not theoretical. The webinar series
+          documenting GM's requirements includes specific cost examples from real programs. A
+          liftgate trim component with Moldflow-predicted warpage that was dismissed by the program
+          team accumulated tens of thousands of dollars and dozens of days in gap and flush
+          correction after launch. Another part required two windage iterations at over $64,000 and
+          40-plus days of trial-and-error tooling modification because the simulation-predicted
+          warpage was not addressed proactively.
+        </p>
+
+        <p>
+          These costs are not unusual. They are representative of what happens across the industry
+          when simulation is treated as a formality rather than a decision-support tool. The
+          standards exist to interrupt that pattern &mdash; to create a consistent baseline where analysis
+          is taken seriously because it was done rigorously, by a qualified analyst, with verified
+          inputs, and with documented outputs at each program milestone.
+        </p>
+
+        <h2>GM's Broader Goal: Kaizen Across the Supplier Community</h2>
+        <p>
+          The deepest objective behind GM's Moldflow standards is continuous improvement at a
+          community scale. By establishing a documented baseline, GM can track improvement over time
+          &mdash; not just within programs, but across the entire network of approved analysts and
+          suppliers. Analysts who go through the approval process and work within the standard get
+          better at their craft faster, because the structure requires them to document, verify, and
+          correlate their predictions against actual results.
+        </p>
+
+        <p>
+          This improvement loop also feeds back to the software developer. Autodesk can see where
+          predictions are systematically off, where characterization data gaps are causing consistent
+          errors, and where user expectations are revealing holes in capability. Standards, at their
+          best, are not bureaucracy &mdash; they are the mechanism by which an entire industry raises
+          its floor.
+        </p>
+
+        <h2>What This Means If You Are a Molder or Tool Shop on a GM Platform</h2>
+        <p>
+          If you are producing plastic components for GM programs, the practical implications are
+          straightforward. Your Moldflow analysis must be performed by a GM-approved analyst. If
+          you do not have one in-house, you must engage one. The analysis must follow the phased
+          structure defined in GMW 16355. Material data must meet the verification requirements.
+          Mesh quality and model setup must meet the standards' criteria. And the outputs at each
+          milestone must be documented in the format the standard requires.
+        </p>
+
+        <p>
+          This is also a business differentiation opportunity. Suppliers who have invested in
+          GM-approved analyst capability are not just checking a compliance box &mdash; they are
+          demonstrating a level of engineering rigor that reduces program risk, builds trust with
+          the OEM, and wins repeat business because launches go better. The cost of doing Moldflow
+          correctly is almost always lower than the cost of the problems that result from doing it
+          poorly.
+        </p>
+
+        <h2>Final Thought</h2>
+        <p>
+          General Motors' Moldflow standards are one of the most thorough OEM simulation frameworks
+          in the automotive industry. They exist because the consequences of poor simulation practice
+          are measurable, expensive, and repeatable across programs. The approved analyst requirement
+          is not a gatekeeping exercise &mdash; it is the most direct way to ensure that the results
+          delivered at each program milestone are credible enough to drive real decisions.
+        </p>
+
+        <p>
+          If you are evaluating Moldflow support for a GM program, the single most important
+          qualification to verify is analyst approval status. Everything else &mdash; software version,
+          hardware capacity, turnaround speed &mdash; is secondary to the question of whether the person
+          running the simulation has the judgment, the training, and the GM endorsement to deliver
+          results you can actually rely on.
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="site-wrap">
+        <p>Takanori Aono &middot; Injection molding simulation insight before steel is cut.</p>
+      </div>
+    </footer>
+  </body>
+</html>

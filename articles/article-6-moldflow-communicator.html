@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A practical guide to using Autodesk Moldflow Communicator &mdash; the free viewer that lets engineers, toolmakers, and program managers explore simulation results without a Moldflow license."
+    />
+    <title>How to Use Moldflow Communicator | Takanori Aono</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Takanori Aono</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="article-hero article-shell">
+      <a class="back-link" href="../index.html">&larr; Back to Home</a>
+      <p class="kicker">Article 6 &middot; 7 minute read</p>
+      <h1>How to Use Moldflow Communicator: Getting the Most Out of Simulation Results Without a Moldflow License</h1>
+    </section>
+
+    <main class="article-shell">
+      <article class="article-content">
+        <p>
+          Simulation results are only useful when the people who need to act on them can actually
+          see and understand them. A detailed Moldflow study locked inside an analyst's workstation
+          does not prevent a bad tooling decision &mdash; it just means the right information was not in
+          the right hands at the right time.
+        </p>
+
+        <p>
+          Autodesk Moldflow Communicator solves this problem. It is a free standalone viewer that
+          allows engineers, toolmakers, program managers, and customers to open, navigate, and
+          interrogate Moldflow simulation results without owning or installing Moldflow Insight or
+          Adviser. If your analyst is using Moldflow and you are receiving their results as PDFs or
+          static screenshots, you are working with a fraction of the information that is available
+          to you.
+        </p>
+
+        <p>
+          This guide explains what Moldflow Communicator is, how to install it, how to open and
+          navigate a result file, and how to use it productively in design reviews, tooling
+          meetings, and program decisions.
+        </p>
+
+        <div class="callout">
+          Moldflow Communicator is free to download and use. Your analyst publishes a .sdy file from
+          their Moldflow project and sends it to you. You open it in Communicator. That is the entire
+          distribution chain.
+        </div>
+
+        <h2>What Moldflow Communicator Is &mdash; and What It Is Not</h2>
+        <p>
+          Communicator is a viewer. It does not run simulations, change analysis inputs, or modify
+          mesh geometry. Think of it the way you think of Acrobat Reader relative to Acrobat Pro &mdash;
+          the full tool creates and edits, the viewer opens and explores.
+        </p>
+
+        <p>
+          What you can do in Communicator:
+        </p>
+
+        <ul>
+          <li>Open and rotate the 3D model in any orientation.</li>
+          <li>Switch between all result plots your analyst included in the published file.</li>
+          <li>Animate fill, pack, and cooling sequences.</li>
+          <li>Query specific nodes or regions to read exact result values.</li>
+          <li>Toggle layers, gates, runners, and cooling circuits on and off.</li>
+          <li>Cut cross-sections through the part to inspect internal results.</li>
+          <li>Compare results side by side if multiple scenarios were published.</li>
+          <li>Add markup notes and annotations directly on the model.</li>
+        </ul>
+
+        <p>
+          These capabilities are significant. A design engineer who can animate a fill sequence and
+          query the knit line location on a specific surface can ask substantively better questions
+          and make better decisions than one who is looking at a color-scaled screenshot with no
+          ability to explore.
+        </p>
+
+        <h2>How to Get Moldflow Communicator</h2>
+        <p>
+          Communicator is available as a free download from Autodesk's website. Search for
+          &ldquo;Autodesk Moldflow Communicator&rdquo; on the Autodesk website or the Autodesk App Store.
+          There is no license fee and no subscription required. You will need to create or use a
+          free Autodesk account to complete the download.
+        </p>
+
+        <p>
+          System requirements are modest. Communicator runs on Windows and requires a standard
+          graphics card with OpenGL support. Most engineering workstations and many business laptops
+          will run it without issue. Installation is straightforward and takes a few minutes.
+        </p>
+
+        <p>
+          Once installed, confirm that your Moldflow analyst knows you are using Communicator. They
+          will need to publish their results in the .sdy format (Moldflow Study file) rather than
+          sending screenshots or a PDF summary. The .sdy file contains the full 3D result data
+          that Communicator needs.
+        </p>
+
+        <h2>Opening a Result File</h2>
+        <p>
+          When your analyst sends you a .sdy file, save it to a local folder and open Communicator.
+          Use <strong>File &rarr; Open</strong> and navigate to the file location. Communicator will load
+          the model geometry, mesh, and all result sets that were included in the publish.
+        </p>
+
+        <p>
+          The interface has three main regions. On the left is the Study Tasks panel, which lists
+          the analyses that were run (Fill, Pack, Cool, Warp) and the result plots available for
+          each. The main window in the center displays the 3D model. On the right, or in a toolbar
+          across the top, are display controls &mdash; legend scaling, clipping planes, animation
+          controls, and visibility toggles.
+        </p>
+
+        <p>
+          Start by rotating the model to orient yourself. Use the left mouse button to rotate, the
+          right button or scroll wheel to zoom, and the middle button or Shift + left button to pan.
+          These are the same navigation conventions used in most 3D CAD viewers.
+        </p>
+
+        <h2>Understanding the Result Plots Panel</h2>
+        <p>
+          The Study Tasks panel on the left shows the result categories your analyst published.
+          Typical categories include:
+        </p>
+
+        <ul>
+          <li><strong>Fill Time</strong> &mdash; how the melt front progresses through the cavity.</li>
+          <li><strong>Pressure at End of Fill</strong> &mdash; pressure distribution at transfer point.</li>
+          <li><strong>Weld Lines</strong> &mdash; locations where flow fronts converge.</li>
+          <li><strong>Air Traps</strong> &mdash; regions where gas may be trapped.</li>
+          <li><strong>Clamp Force</strong> &mdash; clamping force evolution through the fill and pack cycle.</li>
+          <li><strong>Sink Marks</strong> &mdash; predicted surface depression from local shrinkage.</li>
+          <li><strong>Warpage</strong> &mdash; total displacement and individual x, y, z component deflections.</li>
+          <li><strong>Volumetric Shrinkage</strong> &mdash; local shrinkage variation that drives differential warpage.</li>
+          <li><strong>Temperature at Flow Front</strong> &mdash; melt temperature as the front advances.</li>
+          <li><strong>Cooling Time</strong> &mdash; time to reach ejection temperature across the part.</li>
+        </ul>
+
+        <p>
+          Click on any result name to display it on the model. The color scale legend will appear
+          showing the range from minimum to maximum. Results that fall below or above the displayed
+          range can be rescaled by right-clicking the legend and entering new limit values.
+        </p>
+
+        <h2>Animating Fill and Pack Sequences</h2>
+        <p>
+          Fill time results are most informative when viewed as an animation rather than as a
+          static final-state plot. In the animation toolbar, click the Play button to watch the
+          fill sequence progress from gate to last-to-fill region. You will see:
+        </p>
+
+        <ul>
+          <li>How the flow front advances from the gate and whether it stays balanced.</li>
+          <li>Where hesitation occurs &mdash; regions where the front slows as it encounters thin sections.</li>
+          <li>Where race tracking occurs &mdash; where flow accelerates through thick sections and arrives early at the perimeter.</li>
+          <li>Exactly where and when weld lines form, and whether they are consolidating at high or low temperature.</li>
+        </ul>
+
+        <p>
+          Use the playback speed controls to slow the animation at critical moments. If the fill
+          sequence shows a balanced front reaching the perimeter evenly, that is a positive sign.
+          If one region fills significantly earlier than another while sharing a cavity boundary,
+          that asymmetry will drive differential packing and is a warpage risk worth discussing with
+          your analyst.
+        </p>
+
+        <h2>Querying Specific Locations</h2>
+        <p>
+          To read the exact result value at a specific surface location, use the Query tool in the
+          toolbar &mdash; it may appear as a crosshair or probe icon depending on the Communicator version.
+          Click any point on the model surface and a tooltip will display the result value at that
+          node, along with the node ID and coordinates.
+        </p>
+
+        <p>
+          This is useful when you need to report a specific number &mdash; for example, confirming that
+          warpage at a critical datum surface is below a tolerance threshold, or verifying that
+          volumetric shrinkage at a thick boss is within acceptable range. Screenshots with the
+          queried value visible can be included directly in design review documentation.
+        </p>
+
+        <h2>Using the Clipping Plane</h2>
+        <p>
+          Thin-wall parts are easy to interpret on the surface, but thicker structural components,
+          ribbed parts, and multi-cavity tools often require a cross-section view to understand what
+          is happening through the thickness. The clipping plane tool lets you cut through the model
+          at any angle and position.
+        </p>
+
+        <p>
+          To activate the clipping plane, look for the section or clip icon in the display toolbar.
+          You can drag the plane interactively, set it to a specific coordinate, or align it to a
+          flat surface. Common uses include:
+        </p>
+
+        <ul>
+          <li>Inspecting volumetric shrinkage through a rib cross-section to predict sink severity.</li>
+          <li>Viewing cooling temperature gradients through part thickness.</li>
+          <li>Checking whether fiber orientation shifts from skin to core in the section direction.</li>
+          <li>Verifying that runner and gate geometry is represented correctly in the model.</li>
+        </ul>
+
+        <h2>Comparing Scenarios</h2>
+        <p>
+          If your analyst published multiple design scenarios &mdash; for example, two gate location
+          options, or the original cooling layout versus a proposed improvement &mdash; Communicator can
+          display them side by side. Use the <strong>Window &rarr; Tile</strong> option to arrange
+          multiple open study windows in a split view.
+        </p>
+
+        <p>
+          When comparing scenarios, synchronize the model orientation across windows so that you
+          are looking at the same region from the same angle. Most versions of Communicator have a
+          sync view option that links the camera position across tiled windows. This makes direct
+          visual comparison much faster than toggling between separate windows.
+        </p>
+
+        <div class="callout">
+          Design reviews become much more productive when all stakeholders can rotate the same
+          model themselves, query a value they are unsure about, and animate the fill to understand
+          why a gate location was chosen. Communicator turns a presentation into a conversation.
+        </div>
+
+        <h2>Adding Markup and Annotations</h2>
+        <p>
+          Communicator includes basic annotation tools that let you add notes directly to the 3D
+          view. You can place text labels on the model, draw leader lines pointing to specific
+          features, and capture annotated views as images for meeting notes or design review
+          records.
+        </p>
+
+        <p>
+          A practical workflow for design reviews: before the meeting, the responsible engineer opens
+          the .sdy file and places annotations on any region they want to discuss &mdash; flagging a weld
+          line location, marking the highest warpage zone, or noting a pressure concern near a thin
+          feature. Annotated views are saved and used as the starting point for the meeting agenda.
+          This preparation dramatically shortens the explanation time and keeps discussions focused
+          on decisions rather than orientation.
+        </p>
+
+        <h2>Warpage Results: Reading Them Correctly</h2>
+        <p>
+          Warpage results are among the most misread outputs in Moldflow. The default &ldquo;total
+          displacement&rdquo; plot shows the magnitude of deflection at each point, which is useful for
+          identifying where the part moves the most. But total displacement does not tell you the
+          direction of the movement.
+        </p>
+
+        <p>
+          To understand warp direction, switch from the total displacement plot to the component
+          plots: X displacement, Y displacement, and Z displacement. Each shows how much the part
+          deflects in that coordinate direction. A part that warps symmetrically but in opposite
+          directions across its length will show high total displacement but balanced X or Y
+          components &mdash; and may be far less problematic than a part with asymmetric unidirectional
+          deflection.
+        </p>
+
+        <p>
+          When reviewing warpage results in a design meeting, always ask your analyst to walk
+          through the component plots, not just the total displacement plot. The question is not
+          only &ldquo;how much does it move?&rdquo; but &ldquo;which way does it move, and does that direction affect
+          the assembly interface?&rdquo;
+        </p>
+
+        <h2>Cooling Results: What to Look For</h2>
+        <p>
+          Cooling analysis results in Communicator include mold temperature distribution, part
+          temperature at ejection, and cycle time contributions. The most useful result for
+          identifying quality risk is the part temperature at ejection, viewed at the end of the
+          cooling phase.
+        </p>
+
+        <p>
+          Look for regions where part temperature at ejection is significantly higher than the
+          surrounding areas. These hot spots are where the part is not adequately cooled before it
+          leaves the mold and where post-ejection creep or warpage is likely. Localized hot spots
+          over ribs, gates, and thick section transitions are common targets for cooling circuit
+          improvements.
+        </p>
+
+        <p>
+          If the analysis includes a conformal cooling alternative, compare the temperature
+          distribution uniformity between the conventional and conformal scenarios side by side.
+          Improved temperature uniformity at ejection typically predicts reduced warpage &mdash; and the
+          comparison in Communicator makes that relationship visual and immediate.
+        </p>
+
+        <h2>Sharing Results With Stakeholders Who Do Not Have Communicator</h2>
+        <p>
+          Not every stakeholder in a program review will have Communicator installed. For those
+          audiences, use the File &rarr; Export Image function to capture high-resolution screenshots
+          of specific result plots and annotated views. Export the fill animation as a video file
+          and include it in the meeting slide deck.
+        </p>
+
+        <p>
+          When preparing images for non-technical audiences &mdash; program managers, customers, finance
+          reviewers &mdash; prioritize clarity over completeness. A single annotated warpage plot showing
+          measured deflection at the critical interface, with an arrow pointing to the affected
+          datum, communicates the risk better than six technical plots that require CAE training to
+          interpret.
+        </p>
+
+        <h2>Getting the Most From Your Analyst</h2>
+        <p>
+          Communicator is most powerful when the analyst and the review team work together to
+          define what will be published in the .sdy file before the analysis is run. A file that
+          contains only the plots the analyst thought were relevant may not include the result a
+          toolmaker needs to evaluate a cooling channel change. Define the result set in advance:
+          agree on which analyses will be run, which plots will be published, and what the
+          acceptance criteria are for each critical output.
+        </p>
+
+        <p>
+          When you receive the .sdy file, open it before the formal review meeting and make a short
+          list of questions. Note any regions where results are worse than expected, any plots
+          where the color scale seems compressed in a way that may be hiding variation, and any
+          scenarios you want to compare. Bring those notes into the review. An analyst who receives
+          specific, informed questions produces much better follow-up work than one who is asked
+          generic questions after a passive slide presentation.
+        </p>
+
+        <h2>Final Takeaway</h2>
+        <p>
+          Moldflow Communicator removes the barrier between simulation results and the people who
+          need to act on them. It costs nothing, requires no engineering software background to
+          install, and transforms a static report into an interactive engineering tool that any
+          stakeholder can use.
+        </p>
+
+        <p>
+          If you are on a program that involves Moldflow analysis, request the .sdy file from your
+          analyst, install Communicator, and spend thirty minutes exploring the results yourself
+          before the next design review. The questions you will be able to ask &mdash; and the decisions
+          you will be able to make &mdash; will be qualitatively different from what is possible with a
+          PDF summary. That is the practical value of getting simulation results into the right hands.
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="site-wrap">
+        <p>Takanori Aono &middot; Injection molding simulation insight before steel is cut.</p>
+      </div>
+    </footer>
+  </body>
+</html>
