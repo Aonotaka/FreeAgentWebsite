@@ -353,29 +353,8 @@ img {
   background: var(--line);
   margin: 0 1.5rem;
 }
-
-.cred-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-}
-
-.cred-icon-sm {
-  font-size: 0.65rem;
-}
-
 .cert-badge-img {
-  height: 48px;
+  height: 72px;
   width: auto;
   display: block;
   border-radius: 6px;
